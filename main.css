@@ -20,12 +20,14 @@
     font-size: 1.5rem;
     padding: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
   }
 
   h1 {
     font-size: 4rem;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color:white;
   }
 
   figure {
