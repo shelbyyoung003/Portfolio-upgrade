@@ -107,7 +107,7 @@
   color: white;
 }
 
-#contact p{
+#contact h2{
   text-align: center;
   font-size: 2.75rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -122,7 +122,7 @@
     font-size: 2.75rem;
     margin: 0 35px 45px 35px;
     list-style-type: none;
-    border: 3px solid #E0A6E8;
+    border: 3px solid white;
     border-radius: 100%;
     width: 200px;
     height: 200px;
