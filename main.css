@@ -15,6 +15,12 @@
     /*   background: url("https://res.cloudinary.com/dck40m3wf/image/upload/v1455459914/Portfolio/fancy-floral-pattern-384.jpg") repeat; */
   }
 
+   #welcome-section {
+    background-color: #E7C3FF;
+    min-height: 55vh;
+    padding-top: 45vh;
+  }
+
   #welcome-section p{
     text-align: center;
     font-size: 1.5rem;
@@ -66,13 +72,7 @@
   }
 
   nav ul li a:hover{
-    color: white;
-  }
-
-  #welcome-section {
-    background-color: #E7C3FF;
-    min-height: 55vh;
-    padding-top: 45vh;
+    color: #E7C3FF;
   }
 
   #projects {
