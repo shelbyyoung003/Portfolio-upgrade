@@ -1,12 +1,10 @@
 import { people } from './people.js'
 
-let nameElement = document.querySelector(".name")
+/*let nameElement = document.querySelector(".name")
 let genderElement = document.querySelector(".gender")
 
 nameElement.textContent = people[4].name
 genderElement.textContent = people[4].gender
-
-console.log(people);
 
 const intro = document.querySelector(".intro")
 
@@ -23,4 +21,9 @@ intro.appendChild(genderElement)
 genderElement.textContent = people.gender
 
 intro.appendChild(tile)
-}))
+}))*/
+
+const men = people.filter(person => person.gender === "male");
+const women = people.filter(person => person.gender === "female");
+const other = people.filter(person => person.gender === "n/a") | (person => person.gender === "none") | (person => person.gender === "hermaphrodite");
+console.log(other);
