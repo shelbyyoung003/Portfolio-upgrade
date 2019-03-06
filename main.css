@@ -90,6 +90,7 @@
   .project-tiles {
     display: flex;
     justify-content: center;
+    align-items: baseline;
     padding: 50px;
     size: 1rem;
   }
