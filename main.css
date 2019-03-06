@@ -7,20 +7,9 @@
 .project {
     text-decoration: none;
     color: #008080;
-    /*display: inline-block;
-    overflow: hidden;
-    border: 2px solid lightblue;
-    height: 220px;
-    width: 280px;
-    margin: 40px 100px;
-    /*   background: url("https://res.cloudinary.com/dck40m3wf/image/upload/v1455459914/Portfolio/fancy-floral-pattern-384.jpg") repeat; */
   }
 
    .intro {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-between;
     background-color: #E7C3FF;
     min-height: 55vh;
     padding-top: 45vh;
