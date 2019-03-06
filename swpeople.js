@@ -23,6 +23,32 @@ men.forEach(man => {
     main.appendChild(manDiv)
 })
 
+women.forEach(man => {
+    let manDiv = document.createElement('div')
+    manDiv.className = 'box'
+    let name = document.createElement('p')
+    let eyeColor = document.createElement('p')
+    name.textContent = man.name
+    eyeColor.textContent = man.eye_color
+    manDiv.appendChild(name)
+    manDiv.appendChild(eyeColor)
+
+    main.appendChild(manDiv)
+})
+
+other.forEach(man => {
+    let manDiv = document.createElement('div')
+    manDiv.className = 'box'
+    let name = document.createElement('p')
+    let eyeColor = document.createElement('p')
+    name.textContent = man.name
+    eyeColor.textContent = man.eye_color
+    manDiv.appendChild(name)
+    manDiv.appendChild(eyeColor)
+
+    main.appendChild(manDiv)
+})
+
 /* const foundPlanet = (arr, planetUrl) => {
     const foundIt = {}
     arr.find((element) => {
