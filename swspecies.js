@@ -1,10 +1,23 @@
 import { species } from './species.js'
+import { planets } from './planets.js'
+
+const allHomeWorlds = species.map(species => {
+    let foundWorld = planets.find(planet => {
+        return planet.url === species.homeworld
+    })
+    return {
+        name: species.name,
+        home: foundWorld.name
+    }
+})
+
+console.log(allHomeWorlds);
 
 const mammal = species.filter(species => species.classification === "mammal");
 const reptile = species.filter(
     species => (species.classification === "reptile") ||
     (species => species.classification === "reptilian") ||
-    (species => species.classification === "sentient"));
+    (species => species.classification === "sentient")); // Classification and Designation were switched for the Rodian
 const amphibian = species.filter(species => species.classification === "amphibian");
 const other = species.filter(
     species => (species.classification === "unknown") ||
@@ -20,10 +33,13 @@ mammal.forEach(mammal => {
     specDiv.className = 'box'
     let name = document.createElement('p')
     let classification = document.createElement('p')
+    let planetElement = document.createElement('p')
     name.textContent = mammal.name
     classification.textContent = mammal.classification
+    planetElement.textContent = mammal.home
     specDiv.appendChild(name)
     specDiv.appendChild(classification)
+    specDiv.appendChild(homeworld)
 
     main.appendChild(specDiv)
 })
