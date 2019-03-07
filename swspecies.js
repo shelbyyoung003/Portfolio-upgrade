@@ -13,6 +13,17 @@ const allHomeWorlds = species.map(species => {
 
 console.log(allHomeWorlds);
 
+const getLastNumber = (url) => {
+    let end = url.lastIndexOf('/')
+    let start = end - 2
+    if(url.charAt(start) === '/'){
+        start++
+    }
+    return url.slice(start, end)
+}
+
+console.log(getLastNumber(species.url))
+
 const mammal = species.filter(species => species.classification === "mammal");
 const reptile = species.filter(
     species => (species.classification === "reptile") ||
