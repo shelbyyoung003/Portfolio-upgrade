@@ -1,53 +1,73 @@
-import { people } from './people.js'
+import { species } from './species.js'
 
-const men = people.filter(person => person.gender === "male");
-const women = people.filter(person => person.gender === "female");
-const other = people.filter(
-    person => (person.gender === "n/a") ||
-    (person => person.gender === "none") ||
-    (person => person.gender === "hermaphrodite"));
+const mammal = species.filter(species => species.classification === "mammal");
+const reptile = species.filter(
+    species => (species.classification === "reptile") ||
+    (species => species.classification === "reptilian") ||
+    (species => species.classification === "sentient"));
+const amphibian = species.filter(species => species.classification === "amphibian");
+const other = species.filter(
+    species => (species.classification === "unknown") ||
+    (species => species.classification === "gastropod") ||
+    (species => species.classification === "artificial") ||
+    (species => species.classification === "insectoid"));
 
 
 const main = document.querySelector('.container')
 
-men.forEach(man => {
-    let manDiv = document.createElement('div')
-    manDiv.className = 'box'
+mammal.forEach(mammal => {
+    let specDiv = document.createElement('div')
+    specDiv.className = 'box'
     let name = document.createElement('p')
-    let eyeColor = document.createElement('p')
-    name.textContent = man.name
-    eyeColor.textContent = man.eye_color
-    manDiv.appendChild(name)
-    manDiv.appendChild(eyeColor)
+    let classification = document.createElement('p')
+    name.textContent = mammal.name
+    classification.textContent = mammal.classification
+    specDiv.appendChild(name)
+    specDiv.appendChild(classification)
 
-    main.appendChild(manDiv)
+    main.appendChild(specDiv)
 })
 
-women.forEach(man => {
-    let manDiv = document.createElement('div')
-    manDiv.className = 'box'
+reptile.forEach(reptile => {
+    let specDiv = document.createElement('div')
+    specDiv.className = 'box'
     let name = document.createElement('p')
-    let eyeColor = document.createElement('p')
-    name.textContent = man.name
-    eyeColor.textContent = man.eye_color
-    manDiv.appendChild(name)
-    manDiv.appendChild(eyeColor)
+    let classification = document.createElement('p')
+    name.textContent = reptile.name
+    classification.textContent = reptile.classification
+    specDiv.appendChild(name)
+    specDiv.appendChild(classification)
 
-    main.appendChild(manDiv)
+    main.appendChild(specDiv)
 })
 
-other.forEach(man => {
-    let manDiv = document.createElement('div')
-    manDiv.className = 'box'
+amphibian.forEach(amphibian => {
+    let specDiv = document.createElement('div')
+    specDiv.className = 'box'
     let name = document.createElement('p')
-    let eyeColor = document.createElement('p')
-    name.textContent = man.name
-    eyeColor.textContent = man.eye_color
-    manDiv.appendChild(name)
-    manDiv.appendChild(eyeColor)
+    let classification = document.createElement('p')
+    name.textContent = amphibian.name
+    classification.textContent = amphibian.classification
+    specDiv.appendChild(name)
+    specDiv.appendChild(classification)
 
-    main.appendChild(manDiv)
+    main.appendChild(specDiv)
 })
+
+other.forEach(other => {
+    let specDiv = document.createElement('div')
+    specDiv.className = 'box'
+    let name = document.createElement('p')
+    let classification = document.createElement('p')
+    name.textContent = other.name
+    classification.textContent = other.classification
+    specDiv.appendChild(name)
+    specDiv.appendChild(classification)
+
+    main.appendChild(specDiv)
+})
+
+
 
 /* const foundPlanet = (arr, planetUrl) => {
     const foundIt = {}
