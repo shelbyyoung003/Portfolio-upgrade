@@ -1,18 +1,6 @@
 import { species } from './species.js'
 import { planets } from './planets.js'
 
-const allHomeWorlds = species.map(species => {
-    let foundWorld = planets.find(planet => {
-        return planet.url === species.homeworld
-    })
-    return {
-        name: species.name,
-        home: foundWorld.name
-    }
-})
-
-console.log(allHomeWorlds);
-
 const getLastNumber = (url) => {
     let end = url.lastIndexOf('/')
     let start = end - 2
@@ -22,7 +10,20 @@ const getLastNumber = (url) => {
     return url.slice(start, end)
 }
 
-console.log(getLastNumber(species.url))
+const allHomeWorlds = species.map(species => {
+    let foundWorld = planets.find(planet => {
+        return planet.url === species.homeworld
+    })
+    return {
+        name: species.name,
+        home: foundWorld.name,
+    }
+})
+
+console.log(allHomeWorlds);
+
+const mainContainer = document.createElement('div')
+mainContainer.className = 'container'
 
 const mammal = species.filter(species => species.classification === "mammal");
 const reptile = species.filter(
