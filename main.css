@@ -101,6 +101,12 @@
   height: 175px;
 }
 
+#yoda {
+  height: 175px;
+  width: 175px;
+  size: 100%;
+}
+
 #contact {
   padding: 75px;
   background-color: #BAB6FF;
