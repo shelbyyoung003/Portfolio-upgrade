@@ -9,10 +9,11 @@
     justify-content: flex-end;
     position: fixed;
     width: 100%;
-    background-color: white;
+    background-color: black;
   }
 
   nav ul li{
+    display: inline;
     justify-content: space-between;
     list-style: none;
     padding: 20px 40px;
