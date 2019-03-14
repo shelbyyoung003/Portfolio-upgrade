@@ -1,9 +1,9 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
+  *{
+      margin: 0px;
+      padding: 0px;
+      border: 0px;
   }
-
+  
   body {
     margin: 0px;
     background-color: black;
@@ -18,8 +18,8 @@
 
   .logo {    
     position: absolute;
-    top: 20%;
-    left: 45%;
+    top: 40%;
+    left: 24%;
     z-index: 1;
     margin: auto;
     animation: logo 9s ease-out 9s;
@@ -74,8 +74,10 @@
 
   .intro {
     position: absolute;
-    top: 45%;
-    left: 50%;
+    display: flex;
+   justify-content: center;
+    top: 40%;
+    left: 24%;
     animation: intro 6s ease-out 1s;
     color: rgb(75, 213, 238);
     font-weight: 500;
