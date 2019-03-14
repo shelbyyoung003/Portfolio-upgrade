@@ -103,3 +103,15 @@
       opacity: 0;
     }
   }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 120px;
+    margin: 10px;
+    text-align: center;
+}

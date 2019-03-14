@@ -18,3 +18,19 @@ function getRandomPosition() {
     const randomY = Math.floor(Math.random()*y);
     return [randomX,randomY];
 }
+
+const main = document.querySelector('buttons')
+
+const opCrawl = films.filter(films => films.opening_crawl)
+
+opCrawl.forEach(films => {
+    let crawlDiv = document.createElement('div')
+    crawlDiv.filmName = 'box'
+    let opening_crawl = createElement('p')
+    title.textContent = film.title
+    opening_crawl.textContent = film.opening_crawl
+    crawlDiv.appendChild(title)
+    crawlDiv.appendChild(opening_crawl)
+
+
+})
