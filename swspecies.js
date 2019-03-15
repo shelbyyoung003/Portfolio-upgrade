@@ -42,16 +42,13 @@ mainContainer.className = 'container'
 
 allClassification.forEach((spec) => {
     let specElement = document.createElement('div')
-    let classification = document.createElement('p')
     let imageElement = document.createElement('img')
 
     specElement.className = 'box'
     specElement.textContent = spec.name
-    classification.textContent = spec.classification
     imageElement.src = spec.imagePath
 
         
-    specElement.appendChild(classification)
     specElement.appendChild(imageElement)
     mainContainer.appendChild(specElement)
 })
