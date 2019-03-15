@@ -16,13 +16,11 @@
     background-color: white;
   }
 
-#navbar {
+  #navbar {
     display: flex;
     justify-content: flex-end;
-    position: fixed;
     width: 100%;
-    padding: 5px;
-    z-index: 100;
+    background-color: black;
   }
 
   nav ul li{
@@ -35,10 +33,11 @@
     font-size: 2rem;
     font-weight: 700;
     text-decoration: none;
+    color: yellow;
   }
 
   nav ul li a:hover{
-    color: #E7C3FF;
+    color: rgb(75, 213, 238);
   }
 
 .container {
