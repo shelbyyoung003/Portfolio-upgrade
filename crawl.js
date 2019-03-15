@@ -19,18 +19,20 @@ function getRandomPosition() {
     return [randomX,randomY];
 }
 
-const main = document.querySelector('buttons')
+const intro = document.querySelector('.intro')
 
-const opCrawl = films.filter(films => films.opening_crawl)
+films.sort ((a, b) => (a.episode_id > b.episode_id) ? 1 : -1)
 
-opCrawl.forEach(films => {
-    let crawlDiv = document.createElement('div')
-    crawlDiv.filmName = 'box'
-    let opening_crawl = createElement('p')
-    title.textContent = film.title
-    opening_crawl.textContent = film.opening_crawl
-    crawlDiv.appendChild(title)
-    crawlDiv.appendChild(opening_crawl)
+films.forEach(film => {
+    let title = document.createElement('div')
 
+    let titleElement = document.createElement('h1')
+    title.appendChild(titleElement)
+    titleElement.textContent = film.title
+    
+    let crawlElement = document.createElement('div')
+    title.appendChild(crawlElement)
+    crawlElement.textContent = film.opening_crawl
 
+    intro.appendChild(title)
 })

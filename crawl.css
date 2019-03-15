@@ -72,11 +72,11 @@
     color: rgb(75, 213, 238);
   }
 
-  .intro {
+  .galaxy {
     position: absolute;
     display: flex;
    justify-content: center;
-    top: 40%;
+    top: 0%;
     left: 24%;
     animation: intro 6s ease-out 1s;
     color: rgb(75, 213, 238);
@@ -86,7 +86,7 @@
     z-index: 1;
   }
 
-  @keyframes intro {
+  @keyframes galaxy {
     0% {
       opacity: 0;
     }
