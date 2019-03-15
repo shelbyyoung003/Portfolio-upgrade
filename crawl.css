@@ -109,23 +109,25 @@
     display: flex;
    justify-content: center;
    flex-wrap: wrap;
-    top: 0%;
-    left:0%;
-    animation: intro 12s ease-out 1s;
-    color: rgb(75, 213, 238);
+   text-align: center;
+    top: -3%;
+    left: 0%;
+    animation: intro 60s linear 18s infinite;
+    color: yellow;
     font-weight: 30;
-    font-size: 75%;
+    font-size: 90%;
     opacity: 0;
     z-index: 1;
+    margin: 100px;
   }
 
   @keyframes crawl {
     0% {
-      opacity: 0;
+      opacity: 1;
     }
 
     20% {
-      opacity: 1;
+      opacity: 0;
     }
 
     90% {
