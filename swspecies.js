@@ -10,29 +10,52 @@ const getLastNumber = (url) => {
     return url.slice(start, end)
 }
 
-const allHomeWorlds = species.map(species => {
-    console.log(getLastNumber(species.url))
+const allHomeWorlds = species.map(spec => {
     let foundWorld = planets.find(planet => {
-        return planet.url === species.homeworld
+        return planet.url === spec.homeworld
     })
-    let imageURL = getLastNumber(species.url)
+    let imageURL = getLastNumber(spec.url)
     return {
-        name: species.name,
-        home: foundWorld.name,
+        name: spec.name,
         imagePath: `https://starwars-visualguide.com/assets/img/species/${imageURL}.jpg`
     }
 })
 
-//https://starwars-visualguide.com/assets/img/species/5.jpg
+// Reference Image URL: https://starwars-visualguide.com/assets/img/species/5.jpg
 
- const mainContainer = document.createElement('div')
- mainContainer.className = 'container'
 
- allHomeWorlds.forEach((species) => {
-    let specDiv = document.createElement('div')
+const mainContainer = document.createElement('div')
+mainContainer.className = 'container'
+
+allHomeWorlds.forEach((spec) => {
+    let specElement = document.createElement('div')
     let planetElement = document.createElement('p')
     let imageElement = document.createElement('img')
- })
+
+    specElement.className = 'box'
+    specElement.textContent = spec.name
+    planetElement.textContent = spec.home
+    imageElement.src = spec.imagePath
+
+    specElement.appendChild(planetElement)
+    specElement.appendChild(imageElement)
+    mainContainer.appendChild(specElement)
+})
+
+document.body.appendChild(mainContainer)
+
+//  const mainContainer = document.createElement('div')
+//  mainContainer.className = 'container'
+
+//  allHomeWorlds.forEach((species) => {
+//     let specDiv = document.createElement('div')
+//     let planetElement = document.createElement('p')
+//     let imageElement = document.createElement('img')
+
+//     imageElement.src = species.imagePath
+
+//     specDiv.appendChild(imageElement)
+//  })
 
 // const mammal = species.filter(species => species.classification === "mammal");
 // const reptile = species.filter(
@@ -105,6 +128,8 @@ const allHomeWorlds = species.map(species => {
 
 //     main.appendChild(specDiv)
 // })
+
+// Background Details
 
 const numStars = 100;
 
