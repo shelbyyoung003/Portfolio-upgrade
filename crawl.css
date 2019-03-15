@@ -72,11 +72,11 @@
     color: rgb(75, 213, 238);
   }
 
-  .galaxy {
+  .intro {
     position: absolute;
     display: flex;
    justify-content: center;
-    top: 0%;
+    top: 40%;
     left: 24%;
     animation: intro 6s ease-out 1s;
     color: rgb(75, 213, 238);
@@ -86,7 +86,7 @@
     z-index: 1;
   }
 
-  @keyframes galaxy {
+  @keyframes intro {
     0% {
       opacity: 0;
     }
@@ -101,6 +101,39 @@
 
     100% {
       opacity: 0;
+    }
+  }
+
+  .crawl {
+    position: absolute;
+    display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+    top: 0%;
+    left:0%;
+    animation: intro 12s ease-out 1s;
+    color: rgb(75, 213, 238);
+    font-weight: 30;
+    font-size: 75%;
+    opacity: 0;
+    z-index: 1;
+  }
+
+  @keyframes crawl {
+    0% {
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 1;
+    }
+
+    90% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
     }
   }
 

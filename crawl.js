@@ -19,7 +19,7 @@ function getRandomPosition() {
     return [randomX,randomY];
 }
 
-const intro = document.querySelector('.intro')
+const crawl = document.querySelector('.crawl')
 
 films.sort ((a, b) => (a.episode_id > b.episode_id) ? 1 : -1)
 
@@ -34,5 +34,5 @@ films.forEach(film => {
     title.appendChild(crawlElement)
     crawlElement.textContent = film.opening_crawl
 
-    intro.appendChild(title)
+    crawl.appendChild(title)
 })
