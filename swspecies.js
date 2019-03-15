@@ -22,6 +22,18 @@ const allClassification = species.map(spec => {
     }
 })
 
+const mammal = species.filter(spec => spec.classification === "mammal");
+const reptile = species.filter(
+    spec => (spec.classification === "reptile") ||
+    (spec => spec.classification === "reptilian") ||
+    (spec => spec.classification === "sentient")); // Classification and Designation were switched for the Rodian
+const amphibian = species.filter(spec => spec.classification === "amphibian");
+const other = species.filter(
+    spec => (spec.classification === "unknown") ||
+    (spec => spec.classification === "gastropod") ||
+    (spec => spec.classification === "artificial") ||
+    (spec => spec.classification === "insectoid"));
+
 // Reference Image URL: https://starwars-visualguide.com/assets/img/species/5.jpg
 
 
@@ -30,15 +42,16 @@ mainContainer.className = 'container'
 
 allClassification.forEach((spec) => {
     let specElement = document.createElement('div')
-    let classificationElement = document.createElement('p')
+    let classification = document.createElement('p')
     let imageElement = document.createElement('img')
 
     specElement.className = 'box'
     specElement.textContent = spec.name
-    classificationElement.textContent = spec.home
+    classification.textContent = spec.classification
     imageElement.src = spec.imagePath
 
-    specElement.appendChild(classificationElement)
+        
+    specElement.appendChild(classification)
     specElement.appendChild(imageElement)
     mainContainer.appendChild(specElement)
 })
@@ -57,19 +70,6 @@ document.body.appendChild(mainContainer)
 
 //     specDiv.appendChild(imageElement)
 //  })
-
-// const mammal = species.filter(species => species.classification === "mammal");
-// const reptile = species.filter(
-//     species => (species.classification === "reptile") ||
-//     (species => species.classification === "reptilian") ||
-//     (species => species.classification === "sentient")); // Classification and Designation were switched for the Rodian
-// const amphibian = species.filter(species => species.classification === "amphibian");
-// const other = species.filter(
-//     species => (species.classification === "unknown") ||
-//     (species => species.classification === "gastropod") ||
-//     (species => species.classification === "artificial") ||
-//     (species => species.classification === "insectoid"));
-
 
 // const main = document.querySelector('.container')
 
