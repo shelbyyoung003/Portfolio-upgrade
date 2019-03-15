@@ -10,13 +10,14 @@ const getLastNumber = (url) => {
     return url.slice(start, end)
 }
 
-const allHomeWorlds = species.map(spec => {
-    let foundWorld = planets.find(planet => {
-        return planet.url === spec.homeworld
+const allClassification = species.map(spec => {
+    let foundClass = species.find(spec => {
+        return spec.classification
     })
     let imageURL = getLastNumber(spec.url)
     return {
         name: spec.name,
+        classification: foundClass.classification,
         imagePath: `https://starwars-visualguide.com/assets/img/species/${imageURL}.jpg`
     }
 })
@@ -27,17 +28,17 @@ const allHomeWorlds = species.map(spec => {
 const mainContainer = document.createElement('div')
 mainContainer.className = 'container'
 
-allHomeWorlds.forEach((spec) => {
+allClassification.forEach((spec) => {
     let specElement = document.createElement('div')
-    let planetElement = document.createElement('p')
+    let classificationElement = document.createElement('p')
     let imageElement = document.createElement('img')
 
     specElement.className = 'box'
     specElement.textContent = spec.name
-    planetElement.textContent = spec.home
+    classificationElement.textContent = spec.home
     imageElement.src = spec.imagePath
 
-    specElement.appendChild(planetElement)
+    specElement.appendChild(classificationElement)
     specElement.appendChild(imageElement)
     mainContainer.appendChild(specElement)
 })
