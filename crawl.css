@@ -18,8 +18,8 @@
 
   .logo {    
     position: absolute;
-    top: 40%;
-    left: 24%;
+    top: 20%;
+    left: 25%;
     z-index: 1;
     margin: auto;
     animation: logo 9s ease-out 9s;
