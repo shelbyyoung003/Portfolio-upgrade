@@ -1,6 +1,7 @@
 import { pokemon } from "./pokemon.js"
 
-fetch('https://pokeapi.co/api/v2/pokemon/25/')
+pokemon.forEach((singleMon) => {
+    fetch(singleMon.url)
   .then(function(response) {
     return response.json();
   })
@@ -8,6 +9,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/25/')
     console.log(myJson);
     createPokeCard(myJson);
   });
+})
 
   const mainContainer = document.querySelector('.container')
 
