@@ -37,7 +37,7 @@ pokemon.forEach((singleMon) => {
       if(pokeData.id !== 0) {
         //image.src = `../media/${pokeData.id}${upperName}.png`
       } else {
-        image.src = "../media/pokeball.PNG"
+        image.src = '../media/pokeball.PNG'
       }
       figure.appendChild(image)
       figure.appendChild(caption)
