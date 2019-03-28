@@ -1,4 +1,4 @@
-import { films } from './films.js'
+import { films } from '../data/films.js'
 
 const numStars = 100;
 

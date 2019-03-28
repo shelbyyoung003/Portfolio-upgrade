@@ -1,5 +1,5 @@
-import { species } from './species.js'
-import { planets } from './planets.js'
+import { species } from '../data/species.js'
+import { planets } from '../data/planets.js'
 
 const getLastNumber = (url) => {
     let end = url.lastIndexOf('/')
