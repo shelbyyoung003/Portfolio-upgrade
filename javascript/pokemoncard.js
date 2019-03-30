@@ -10,17 +10,6 @@ class Pokemon {
 
 let newPokemon = new Pokemon("MysteryMon")
 
-pokemon.forEach((singleMon) => {
-    fetch(singleMon.url)
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(myJson) {
-    //console.log(myJson);
-    createPokeCard(myJson);
-  });
-})
-
 
   const mainContainer = document.querySelector('.container')
 
@@ -36,14 +25,26 @@ pokemon.forEach((singleMon) => {
       caption.textContent = upperName 
       if(pokeData.id !== 0) {
         //image.src = `../media/${pokeData.id}${upperName}.png`
+        image.src = pokeData.sprites.front_shiny
       } else {
-        image.src = '../media/pokeball.png'
+        image.src = "../media/pokeball.png"
       }
+
       figure.appendChild(image)
       figure.appendChild(caption)
       card.appendChild(figure)
       mainContainer.appendChild(card)
   }
+
+  pokemon.forEach((singleMon) => {
+    fetch(singleMon.url)
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    createPokeCard(myJson);
+  })
+})
 
   const newPokemonButton = document.querySelector('button')
 
