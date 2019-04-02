@@ -25,7 +25,7 @@ let newPokemon = new Pokemon("MysteryMon")
       caption.textContent = upperName 
       if(pokeData.id !== 0) {
         image.src = `../media/${pokeData.id}${upperName}.png`
-        //image.src = pokeData.sprites.front_shiny
+        //image.src = pokeData.sprites.front_default
       } else {
         image.src = "../media/pokeball.png"
       }
