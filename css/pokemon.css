@@ -13,6 +13,29 @@ img {
     width: 220px;
 }
 
-/* .button {
-    position: fixed;
-} */
+.button {
+    width: 300px;
+}
+
+.card {
+    display: inline;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card.is-flipped{
+    transform: rotateY(180deg);
+}
+
+.card_face {
+    /* position: absolute; */
+    backface-visibility: hidden;
+}
+
+.card_face--back {
+    /* width: 200px;
+    height: 200px; */
+    background-image: url("../images/pokeball.png");
+    transform: rotateY(180deg);
+}
