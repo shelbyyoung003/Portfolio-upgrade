@@ -4,7 +4,7 @@ const mainContainer = document.querySelector('.container')
 
 function cardFront(pokeData) {
   let cardFront = document.createElement('div')
-  cardFront.className = 'card_face'
+  cardFront.className = 'card__face'
   let figure = document.createElement('figure')
   let caption = document.createElement('figcaption')
   let image = document.createElement('img')
@@ -24,36 +24,36 @@ function cardFront(pokeData) {
   return cardFront
 }
 
-function cardBackInfo(pokeData) {
-  let infoDiv = document.createElement('div')
-  infoDiv.className = 'infoDiv'
-  let moveOne = document.createElement('p')
-  let moveTwo = document.createElement('p')
-  let moveThree = document.createElement('p')
-  let moveFour = document.createElement('p')
+// function cardBackInfo(pokeData) {
+//   let infoDiv = document.createElement('div')
+//   infoDiv.className = 'infoDiv'
+//   let moveOne = document.createElement('p')
+//   let moveTwo = document.createElement('p')
+//   let moveThree = document.createElement('p')
+//   let moveFour = document.createElement('p')
 
-  moveOne.textContent = pokeData.moves[0].move.name
-  moveTwo.textContent = pokeData.moves[1].move.name
-  moveThree.textContent = pokeData.moves[2].move.name
-  moveFour.textContent = pokeData.moves[3].move.name
+//   moveOne.textContent = pokeData.moves[0].move.name
+//   moveTwo.textContent = pokeData.moves[1].move.name
+//   moveThree.textContent = pokeData.moves[2].move.name
+//   moveFour.textContent = pokeData.moves[3].move.name
   
-  infoDiv.appendChild(moveOne)
-  infoDiv.appendChild(moveTwo)
-  infoDiv.appendChild(moveThree)
-  infoDiv.appendChild(moveFour)
+//   infoDiv.appendChild(moveOne)
+//   infoDiv.appendChild(moveTwo)
+//   infoDiv.appendChild(moveThree)
+//   infoDiv.appendChild(moveFour)
 
-  return infoDiv
-}
+//   return infoDiv
+// }
 
 function cardBack(pokeData) {
   let cardBack = document.createElement('div')
   let backImage = document.createElement('img')
   backImage.className = 'backImage'
   backImage.src = '../images/pokeball.png'
-  cardBack.classname = 'card_face card_face--back'
+  cardBack.classname = 'card__face card__face--back'
 
   cardBack.appendChild(backImage)
-  cardBack.appendChild(cardBackInfo(pokeData))
+  //cardBack.appendChild(cardBackInfo(pokeData))
   
   return cardBack
 }
@@ -73,7 +73,7 @@ function createPokeCard(pokeData) {
 
   scene.appendChild(card)
   mainContainer.appendChild(scene)
-  
+
 }
 
 pokemon.forEach(singleMon => {
