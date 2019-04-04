@@ -20,11 +20,13 @@ function cardFront(pokeData) {
   figure.appendChild(image)
   figure.appendChild(caption)
   cardFront.appendChild(figure)
+  
   return cardFront
 }
 
 function cardBackInfo(pokeData) {
   let infoDiv = document.createElement('div')
+  infoDiv.className = 'infoDiv'
   let moveOne = document.createElement('p')
   let moveTwo = document.createElement('p')
   let moveThree = document.createElement('p')
@@ -68,6 +70,10 @@ function createPokeCard(pokeData) {
   card.addEventListener('click', function () {
     card.classList.toggle("is-flipped")
   })
+
+  scene.appendChild(card)
+  mainContainer.appendChild(scene)
+  
 }
 
 pokemon.forEach(singleMon => {

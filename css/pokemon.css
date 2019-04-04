@@ -16,6 +16,11 @@ img {
     height: 200px;
 }
 
+figure {
+    margin: 0px;
+    padding: 4px;
+}
+
 .button {
     width: 300px;
     height: 80px;
@@ -61,5 +66,12 @@ img {
 }
 
 .backImage {
+    position: absolute;
+    top: 0;
+    left: 0;
     opacity: 0.5;
+}
+
+.infoDiv {
+    position: relative;
 }
