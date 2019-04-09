@@ -117,8 +117,8 @@ const newPokemonButton = document.querySelector('button')
 
 newPokemonButton.addEventListener('click', function() {
     createPokeCard(matchIdToImage(new Pokemon('Thoremon')))
-    // let pokemonID = prompt('Enter an ID of an existing pokemon:')
-    // fetchSinglePokemon(pokemonID)
+    let pokemonID = prompt('Enter an ID of an existing pokemon:')
+    fetchSinglePokemon(pokemonID)
   });
 
 //console.log(pokemon)
