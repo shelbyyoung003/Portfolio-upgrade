@@ -116,7 +116,7 @@ class Pokemon {
 const newPokemonButton = document.querySelector('button')
 
 newPokemonButton.addEventListener('click', function() {
-    createPokeCard(matchIdToImage(new Pokemon('Thoremon')))
+    //createPokeCard(matchIdToImage(new Pokemon('MysteryMon')))
     let pokemonID = prompt('Enter an ID of an existing pokemon:')
     fetchSinglePokemon(pokemonID)
   });
