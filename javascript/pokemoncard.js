@@ -140,24 +140,22 @@ class Pokemon {
 }
 
 const mysteryButton = document.querySelector('mystery')
-const selectPokemonButton = document.querySelector('fetchpokemon')
-const pokeTypeButton = document.querySelector('pokeType')
+const selectPokemonButton = document.querySelector('fetchPokemon')
+//const pokeTypeButton = document.querySelector('pokeType')
+
 mysteryButton.addEventListener('click', function() {
     createPokeCard(matchIdToImage(new Pokemon('MysteryMon')))
 })
+
 selectPokemonButton.addEventListener('click', function(){
-    let pokmeonID = prompt('Enter an ID of an existing Pokemon:')
+    let pokemonID = prompt('Enter an ID of an existing Pokemon:')
     fetchSinglePokemon(pokemonID)
 })
-pokeTypeButton.addEventListener('click', function(){
-    allFetchedPokemon.filter((pokemon) => {
-        
-    })
-})
 
+// const poisonTypes = []
 
-// newPokemonButton.addEventListener('click', function () {
-//     createPokeCard(matchIdToImage(new Pokemon('MysteryMon')))
-//     // let pokemonID = prompt('Enter an ID of an existing pokemon:')
-//     // fetchSinglePokemon(pokemonID)
-// });
+// pokeTypeButton.addEventListener('click', function(){
+//     allFetchedPokemon.filter((pokemon) => {
+//         return poisonTypes = pokemon.types[0].type.name === "poison"
+//     })
+// })
