@@ -69,12 +69,15 @@ function createPokeCard(pokeData) {
     mainContainer.appendChild(scene)
 }
 
+const allFetchedPokemon = []
+
 pokemon.forEach(singleMon => {
     fetch(singleMon.url)
         .then(function (response) {
             return response.json()
         })
         .then(function (myJson) {
+            allFetchedPokemon.push(myJson)
             createPokeCard(matchIdToImage(myJson))
         })
 })
@@ -136,18 +139,25 @@ class Pokemon {
     }
 }
 
-const newPokemonButton = document.querySelector('button')
-
-newPokemonButton.addEventListener('click', function () {
+const mysteryButton = document.querySelector('mystery')
+const selectPokemonButton = document.querySelector('fetchpokemon')
+const pokeTypeButton = document.querySelector('pokeType')
+mysteryButton.addEventListener('click', function() {
     createPokeCard(matchIdToImage(new Pokemon('MysteryMon')))
-    // let pokemonID = prompt('Enter an ID of an existing pokemon:')
-    // fetchSinglePokemon(pokemonID)
-});
+})
+selectPokemonButton.addEventListener('click', function(){
+    let pokmeonID = prompt('Enter an ID of an existing Pokemon:')
+    fetchSinglePokemon(pokemonID)
+})
+pokeTypeButton.addEventListener('click', function(){
+    allFetchedPokemon.filter((pokemon) => {
+        
+    })
+})
 
- // const newPokemonButton = document.querySelector('button')
 
-// newPokemonButton.addEventListener('click', function() {
+// newPokemonButton.addEventListener('click', function () {
 //     createPokeCard(matchIdToImage(new Pokemon('MysteryMon')))
 //     // let pokemonID = prompt('Enter an ID of an existing pokemon:')
 //     // fetchSinglePokemon(pokemonID)
-//   });
+// });
