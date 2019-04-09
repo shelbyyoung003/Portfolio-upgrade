@@ -8,6 +8,14 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
   }
+
+  h3 {
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+  }
   
   .scene {
     width: 220px;
@@ -66,7 +74,7 @@ main {
   .backImage {
       position: absolute;
       top: 15px;
-      left: 5px;
+      left: 6px;
       opacity: 0.25;
   }
   
