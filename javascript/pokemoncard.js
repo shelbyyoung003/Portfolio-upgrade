@@ -143,7 +143,7 @@ const mysteryButton = document.querySelector('mystery')
 const selectPokemonButton = document.querySelector('fetchPokemon')
 //const pokeTypeButton = document.querySelector('pokeType')
 
-mysteryButton.addEventListener('click', function() {
+mysteryButton.addEventListener('click', function(){
     createPokeCard(matchIdToImage(new Pokemon('MysteryMon')))
 })
 
