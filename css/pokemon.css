@@ -58,8 +58,9 @@ main {
     font-family: Pokemon;
     font-size: 3.8rem;
     color: black;
-    padding-top: 40px;
-  }
+    margin-top: 40px;
+    margin-bottom: 0%;
+    }
 
   h4 {
     text-align: center;
@@ -81,7 +82,7 @@ main {
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
-    background: #283A54;
+    background:#EBF6FF;
   }
   
   .card.is-flipped {
@@ -94,7 +95,7 @@ main {
     height: 100%;
     text-align: center;
     backface-visibility: hidden;
-    color: #9793A3;
+    color: black;
   }
   
   .card__face--back {
@@ -105,15 +106,15 @@ main {
   figure {
       margin: 0px;
       padding: 4px;
-      color:#9793A3;
+      color:black;
   }
   
   button {
     width: 300px;
     height: 80px;
     font-size: 1.5rem;
-    background-color:#283A54;
-    color:#9793A3;
+    background-color:#EBF6FF;
+    color:black;
     margin-top: 20px;
     text-align: center;
     display: inline-block;
