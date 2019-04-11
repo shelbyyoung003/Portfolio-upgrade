@@ -50,7 +50,7 @@ main {
   }
 
   nav ul li a:hover{
-    color: rgb(75, 213, 238);
+    color: #9793A3;
   }
 
   h3 {
@@ -81,7 +81,7 @@ main {
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
-    background: grey;
+    background: #283A54;
   }
   
   .card.is-flipped {
@@ -94,6 +94,7 @@ main {
     height: 100%;
     text-align: center;
     backface-visibility: hidden;
+    color: #9793A3;
   }
   
   .card__face--back {
@@ -104,20 +105,20 @@ main {
   figure {
       margin: 0px;
       padding: 4px;
-      color: grey;
+      color:#9793A3;
   }
   
   button {
-    display: flex;
-    flex-wrap: wrap;
     width: 300px;
     height: 80px;
     font-size: 1.5rem;
-    background-color:#029EEF;
-    color:white;
+    background-color:#283A54;
+    color:#9793A3;
     margin-top: 20px;
+    text-align: center;
+    display: inline-block;
   }
-  
+
   img {
       padding: 4px;
       width: 200px;
