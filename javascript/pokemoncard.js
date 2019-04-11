@@ -11,10 +11,10 @@ function cardFront(pokeData) {
 
     caption.textContent = pokeData.name
     if (pokeData.id !== 0) {
-        //image.src = `../images/${pokeData.imageID}${pokeData.name}.png`
-        image.src = pokeData.sprites.front_default
+        image.src = `/Portfolio-1/images/${pokeData.imageID}${pokeData.name}.png`
+        //image.src = pokeData.sprites.front_default
     } else {
-        image.src = `../images/pokeball.png`
+        image.src = `/Portfolio-1/images/pokeball.png`
     }
 
     figure.appendChild(image)
@@ -45,7 +45,7 @@ function cardBack(pokeData) {
     let cardBack = document.createElement('div')
     let backImage = document.createElement('img')
     backImage.className = 'backImage'
-    backImage.src = `../images/pokeball.png`
+    backImage.src = `/Portfolio-1/images/pokeball.png`
     cardBack.className = 'card__face card__face--back'
     cardBack.appendChild(backImage)
     cardBack.appendChild(cardBackInfo(pokeData))
@@ -94,13 +94,6 @@ function matchIdToImage(aPokemon) {
     }
     if (aPokemon.id > 99) {
         aPokemon.imageID = aPokemon.id
-    }
-    if (aPokemon.name === "mr-mime") {
-        aPokemon.name = "mr. Mime"
-    }
-    let dash = aPokemon.name.indexOf('-')
-    if (dash !== -1) {
-        aPokemon.name = aPokemon.name.slice(0, dash)
     }
     aPokemon.name = aPokemon.name.charAt(0).toUpperCase() + aPokemon.name.slice(1)
     return aPokemon
