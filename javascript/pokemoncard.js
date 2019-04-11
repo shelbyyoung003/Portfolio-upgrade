@@ -95,6 +95,13 @@ function matchIdToImage(aPokemon) {
     if (aPokemon.id > 99) {
         aPokemon.imageID = aPokemon.id
     }
+    if (aPokemon.name === "mr-mime") {
+        aPokemon.name = "mr. Mime"
+    }
+    let dash = aPokemon.name.indexOf('-')
+    if (dash !== -1) {
+        aPokemon.name = aPokemon.name.slice(0, dash)
+    }
     aPokemon.name = aPokemon.name.charAt(0).toUpperCase() + aPokemon.name.slice(1)
     return aPokemon
 }
@@ -112,36 +119,36 @@ function fetchSinglePokemon(id) {
 class Pokemon {
     constructor(name) {
         this.id = 0,
-            this.name = name
+        this.name = name,
         this.moves = [
             {
                 move: {
-                    name: "Stealth"
+                    name: "Stealth",
                 }
             },
             {
                 move: {
-                    name: "Illusion"
+                    name: "Illusion",
                 }
             },
             {
                 move: {
-                    name: "Sneak Slash"
+                    name: "Sneak Slash",
                 }
             },
             {
                 move: {
-                    name: "Disappear"
-                }
+                    name: "Disappear",
+                },
 
-            }
+            },
         ]
     }
 }
 
-const mysteryButton = document.querySelector('mystery')
-const selectPokemonButton = document.querySelector('fetchPokemon')
-//const pokeTypeButton = document.querySelector('pokeType')
+const mysteryButton = document.querySelector('#mystery')
+const selectPokemonButton = document.querySelector('#fetchPokemon')
+const pokeTypeButton = document.querySelector('#pokeType')
 
 mysteryButton.addEventListener('click', function(){
     createPokeCard(matchIdToImage(new Pokemon('MysteryMon')))
@@ -152,10 +159,8 @@ selectPokemonButton.addEventListener('click', function(){
     fetchSinglePokemon(pokemonID)
 })
 
-// const poisonTypes = []
+pokeTypeButton.addEventListener('click', function (){
+    const poisonTypes = allFetchedPokemon.filter(pokemon => pokemon.types[0].type.name === "poison")
+})
 
-// pokeTypeButton.addEventListener('click', function(){
-//     allFetchedPokemon.filter((pokemon) => {
-//         return poisonTypes = pokemon.types[0].type.name === "poison"
-//     })
-// })
+console.log(poisonTypes)
