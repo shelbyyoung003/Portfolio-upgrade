@@ -7,17 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/pokemon.css">
 </head>
-
-<audio controls>
-    <source src="media/pokerap_instrumental.mp3" type="audio/mpeg">
-  </audio>
   
 <body>
     <header>
+
+
+        <p>Click the play button to listen to the Pokerap!</p>
+        <audio controls>
+            <source src="media/pokerap_instrumental.mp3" type="audio/mpeg">
+            </audio>
+
       <h3>Pokemon Baseball Cards</h3>
       <h4> Click on each of the cards below to see the Pokemon's top four moves. </h4>
-      <h4> Summon a Mystery Pokemon by clicking on the button below. Search for a specific Pokemon using it's ID number with the button below.</h4>
-      <h4> Sort the Pokemon by Type with the checkboxes below!</h4>
+      <h4> Summon a Mystery Pokemon or an existing Pokemon using the buttons below!</h4>
     </header>
     <main>
    <div class="container">
@@ -29,6 +31,7 @@
    <!-- <button id="pokeType"> Sort the Pokemon by Type!</button> -->
 
    <div class="button is-primary">
+     <p>Filter your Pokemon by Type:</p>
      <input type = "checkbox" id ="normal" name="normal">
      <label for="normal">Normal</label>
      <input type = "checkbox" id ="fire" name="fire">
