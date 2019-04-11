@@ -133,7 +133,7 @@ class Pokemon {
             },
             {
                 move: {
-                    name: "Sneak Slash",
+                    name: "Sneak-Slash",
                 }
             },
             {
