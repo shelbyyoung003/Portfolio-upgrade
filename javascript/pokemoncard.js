@@ -95,6 +95,13 @@ function matchIdToImage(aPokemon) {
     if (aPokemon.id > 99) {
         aPokemon.imageID = aPokemon.id
     }
+    if (aPokemon.name === "mr-mime"){
+        aPokemon.name = "Mr_Mime"
+    }
+    let dash = aPokemon.name.indexOf('-')
+    if (dash !== -1) {
+        aPokemon.name = aPokemon.name.slice(0,dash)
+    }
     aPokemon.name = aPokemon.name.charAt(0).toUpperCase() + aPokemon.name.slice(1)
     return aPokemon
 }
