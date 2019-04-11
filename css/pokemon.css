@@ -13,6 +13,31 @@ main {
     justify-content: space-around;
   }
 
+  #navbar {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+  }
+
+  nav ul li{
+    justify-content: space-between;
+    list-style: none;
+    padding: 20px 40px;
+  }
+
+  nav ul li a{
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: yellow;
+  }
+
+  nav ul li a:hover{
+    color: rgb(75, 213, 238);
+  }
+
   h3 {
     text-align: center;
   }
@@ -89,6 +114,7 @@ main {
 
   .infoDiv p {
     padding-top: 17px;
+  
   }
 
   header {
