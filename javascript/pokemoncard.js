@@ -123,22 +123,22 @@ class Pokemon {
         this.moves = [
             {
                 move: {
-                    name: "Stealth",
+                    name: "stealth",
                 }
             },
             {
                 move: {
-                    name: "Illusion",
+                    name: "illusion",
                 }
             },
             {
                 move: {
-                    name: "Sneak-Slash",
+                    name: "sneak-slash",
                 }
             },
             {
                 move: {
-                    name: "Disappear",
+                    name: "disappear",
                 },
 
             },
