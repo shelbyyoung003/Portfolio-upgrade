@@ -123,22 +123,22 @@ class Pokemon {
         this.moves = [
             {
                 move: {
-                    name: "stealth",
+                    name: "roar-of-time",
                 }
             },
             {
                 move: {
-                    name: "illusion",
+                    name: "aura-sphere",
                 }
             },
             {
                 move: {
-                    name: "sneak-slash",
+                    name: "extreme-speed",
                 }
             },
             {
                 move: {
-                    name: "disappear",
+                    name: "spectral-thief",
                 },
 
             },
@@ -151,7 +151,7 @@ const selectPokemonButton = document.querySelector('#fetchPokemon')
 const pokeTypeButton = document.querySelector('#pokeType')
 
 mysteryButton.addEventListener('click', function(){
-    createPokeCard(matchIdToImage(new Pokemon('MysteryMon')))
+    createPokeCard(matchIdToImage(new Pokemon('Nebulus')))
 })
 
 selectPokemonButton.addEventListener('click', function(){
