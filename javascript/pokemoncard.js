@@ -14,7 +14,7 @@ function cardFront(pokeData) {
         //image.src = `/Portfolio-1/images/${pokeData.imageID}${pokeData.name}.png`
         image.src = pokeData.sprites.front_default
     } else {
-        image.src = `../images/nebulus.jpg`
+        image.src = `../images/nebulus.png`
     }
 
     figure.appendChild(image)
