@@ -53,9 +53,9 @@
   #navbar {
     display: flex;
     justify-content: flex-end;
-    position: fixed;
+    position: absolute;
     width: 100%;
-    background-color: white;
+    background-color: transparent;
   }
 
   nav ul li{
@@ -71,7 +71,7 @@
   }
 
   nav ul li a:hover{
-    color: #E7C3FF;
+    color: white;
   }
 
   #projects {
