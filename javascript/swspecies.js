@@ -34,8 +34,6 @@ const other = species.filter(
     (spec => spec.classification === "artificial") ||
     (spec => spec.classification === "insectoid"));
 
-// Reference Image URL: https://starwars-visualguide.com/assets/img/species/5.jpg
-
 
 const mainContainer = document.createElement('div')
 mainContainer.className = 'container'
