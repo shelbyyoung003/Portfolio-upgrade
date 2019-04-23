@@ -58,80 +58,80 @@ function createPokeCard(pokeData) {
     let card = document.createElement('div')
     card.className = 'card'
 
-    let type = pokemon.types[0].type.name
-    switch (type) {
-        default:
-            console.log("Unknown Pokemon Type")
-            break;
-        case 'poison':
-            console.log("Poison")
-            scene.classList.toggle('is-poison')
-            break;
-        case 'normal':
-            console.log("Psychic")
-            scene.classList.toggle('is-psychic')
-            break;
-        case 'fairy':
-            console.log("Fairy")
-            scene.classList.toggle('is-fairy')
-            break;
-        case 'electric':
-            console.log("Electric")
-            scene.classList.toggle('is-electric')
-            break;
-        case 'grass':
-            console.log("Grass")
-            scene.classList.toggle('is-grass')
-            break;
-        case 'fire':
-            console.log("Fire")
-            scene.classList.toggle('is-fire')
-            break;
-        case 'fighting':
-            console.log("Fighting")
-            scene.classList.toggle('is-fighting')
-            break;
-        case 'water':
-            console.log("Water")
-            scene.classList.toggle('is-water')
-            break;
-        case 'flying':
-            console.log("Flying")
-            scene.classList.toggle('is-flying')
-            break;
-        case 'ground':
-            console.log("Ground")
-            scene.classList.toggle('is-ground')
-            break;
-        case 'rock':
-            console.log("Rock")
-            scene.classList.toggle('is-rock')
-            break;
-        case 'ice':
-            console.log("Ice")
-            scene.classList.toggle('is-ice')
-            break;
-        case 'bug':
-            console.log("Bug")
-            scene.classList.toggle('is-bug')
-            break;
-        case 'dragon':
-            console.log("Dragon")
-            scene.classList.toggle('is-dragon')
-            break;
-        case 'ghost':
-            console.log("Ghost")
-            scene.classList.toggle('is-ghost')
-            break;
-        case 'dark':
-            console.log("Dark")
-            scene.classList.toggle('is-dark')
-            break;
-        case 'steel':
-            console.log("Steel")
-            scene.classList.toggle('is-steel')
-            break;
-    }
+    // let type = pokemon.types[0].type.name
+    // switch (type) {
+    //     default:
+    //         console.log("Unknown Pokemon Type")
+    //         break;
+    //     case 'poison':
+    //         console.log("Poison")
+    //         scene.classList.toggle('is-poison')
+    //         break;
+    //     case 'normal':
+    //         console.log("Psychic")
+    //         scene.classList.toggle('is-psychic')
+    //         break;
+    //     case 'fairy':
+    //         console.log("Fairy")
+    //         scene.classList.toggle('is-fairy')
+    //         break;
+    //     case 'electric':
+    //         console.log("Electric")
+    //         scene.classList.toggle('is-electric')
+    //         break;
+    //     case 'grass':
+    //         console.log("Grass")
+    //         scene.classList.toggle('is-grass')
+    //         break;
+    //     case 'fire':
+    //         console.log("Fire")
+    //         scene.classList.toggle('is-fire')
+    //         break;
+    //     case 'fighting':
+    //         console.log("Fighting")
+    //         scene.classList.toggle('is-fighting')
+    //         break;
+    //     case 'water':
+    //         console.log("Water")
+    //         scene.classList.toggle('is-water')
+    //         break;
+    //     case 'flying':
+    //         console.log("Flying")
+    //         scene.classList.toggle('is-flying')
+    //         break;
+    //     case 'ground':
+    //         console.log("Ground")
+    //         scene.classList.toggle('is-ground')
+    //         break;
+    //     case 'rock':
+    //         console.log("Rock")
+    //         scene.classList.toggle('is-rock')
+    //         break;
+    //     case 'ice':
+    //         console.log("Ice")
+    //         scene.classList.toggle('is-ice')
+    //         break;
+    //     case 'bug':
+    //         console.log("Bug")
+    //         scene.classList.toggle('is-bug')
+    //         break;
+    //     case 'dragon':
+    //         console.log("Dragon")
+    //         scene.classList.toggle('is-dragon')
+    //         break;
+    //     case 'ghost':
+    //         console.log("Ghost")
+    //         scene.classList.toggle('is-ghost')
+    //         break;
+    //     case 'dark':
+    //         console.log("Dark")
+    //         scene.classList.toggle('is-dark')
+    //         break;
+    //     case 'steel':
+    //         console.log("Steel")
+    //         scene.classList.toggle('is-steel')
+    //         break;
+    // }
 
     card.appendChild(cardFront(pokeData))
     card.appendChild(cardBack(pokeData))
@@ -260,3 +260,4 @@ pokeTypeButton.addEventListener('click', function () {
     console.log("You clicked on the poison button.")
     console.log(allPokeScenes)
 })
+
