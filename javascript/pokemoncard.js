@@ -155,8 +155,7 @@ pokemon.forEach(singleMon => {
         })
         .then(function (myJson) {
             allFetchedPokemon.push(myJson)
-            //allPokeScenes.push()
-            createPokeCard(matchIdToImage(myJson))
+            allPokeScenes.push(createPokeCard(matchIdToImage(myJson)))
         })
 })
 
@@ -257,7 +256,8 @@ selectPokemonButton.addEventListener('click', function () {
 
 
 pokeTypeButton.addEventListener('click', function () {
-    console.log("You clicked on the poison button.")
-    console.log(allPokeScenes)
+    // console.log("You clicked on the poison button.")
+    // console.log(allPokeScenes)
 })
 
+console.log(allPokeScenes)
