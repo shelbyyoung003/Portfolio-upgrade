@@ -35,9 +35,15 @@ const senWithPics = senators.map(senator => {
     let senatorPic = document.createElement('img')
     let senatorFig = document.createElement('figure')
     let senatorCap = document.createElement('figcaption')
+    let total = document.createElement('p')
+    let missed = document.createElement('p')
     senatorCap.textContent = `${senator.first_name} ${senator.last_name}`
+    total.textContent = `Total Votes: ${senator.total_votes}`
+    missed.textContent = `Missed Votes: ${senator.missed_votes}`
     senatorPic.src = senator.imgURL
     senatorFig.appendChild(senatorPic)
     senatorFig.appendChild(senatorCap)
+    senatorFig.appendChild(total)
+    senatorFig.appendChild(missed)
     pictureDiv.appendChild(senatorFig)
   })
