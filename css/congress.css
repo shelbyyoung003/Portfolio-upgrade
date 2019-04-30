@@ -8,9 +8,15 @@ body {
     background: fixed url('../images/patriotic.jpg');
 }
 
+img {
+    height: 260px;
+    width: 200px;
+}
+
 figure{
     background: white;
     padding-bottom: 10px;
+    border: 2px solid black;
 }
 
 figcaption{
