@@ -3,3 +3,17 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+body {
+    background: fixed url('../images/patriotic.jpg');
+}
+
+figure{
+    background: white;
+    padding-bottom: 10px;
+}
+
+figcaption{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
