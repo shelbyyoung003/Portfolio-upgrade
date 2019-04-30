@@ -24,9 +24,11 @@ const allMissedVotes = representatives.reduce((acc, rep) => {
 }, 0)
 
 
-
 const senWithPics = senators.map(senator => {
   senator.imgURL = `https://www.congress.gov/img/member/${senator.id.toLowerCase()}.jpg`
+  if (senator.id === 'J000300') {
+    senator.imgURL = `../images/doug.jpg`
+  }
   return senator
 })
   let pictureDiv = document.querySelector('.container')
