@@ -1,5 +1,5 @@
-import { senators } from './senators.js'
-import { representatives } from './representatives.js'
+import { senators } from '../data/senators.js'
+import { representatives } from '../data/representatives.js'
 
 // filter examples
 
